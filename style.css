@@ -1,7 +1,10 @@
-
-img{
-	height: 200px;
+img {
+  height: 200px;
 }
-label{
-	color: white;
+label {
+  color: white;
+}
+
+#sideba {
+  padding-top: 70px;
 }
