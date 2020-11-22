@@ -1,15 +1,17 @@
+// I am fetching course properties from this js file
+
 let lessons = [
   {
-    id: 01,
-    course: "Angular",
-    level: "Advance Level",
-    price: 500,
-    image: "assets/images/logo/angu.jpg",
-    availableInventory: 5,
+    id: 01, // FIrst Course
+    course: "Angular", //COurse Name
+    level: "Advance Level", //Course Level
+    price: AED 500, // Course Amount 
+    image: "assets/images/logo/angu.jpg", //Conver Image
+    availableInventory: 5, // Available spots 
     rating: 3,
   },
   {
-    id: 02,
+    id: 02, // Second Course
     course: "Ios Developemnt",
     level: "Beginer Course",
     price: 650,
