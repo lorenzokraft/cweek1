@@ -5,13 +5,13 @@ let lessons = [
     id: 01, // FIrst Course
     course: "Angular", //COurse Name
     level: "Advance Level", //Course Level
-    price: AED 500, // Course Amount 
+    price: 500, // Course Amount
     image: "assets/images/logo/angu.jpg", //Conver Image
-    availableInventory: 5, // Available spots 
+    availableInventory: 5, // Available spots
     rating: 3,
   },
   {
-    id: 02, // Second Course
+    id: 02,
     course: "Ios Developemnt",
     level: "Beginer Course",
     price: 650,
