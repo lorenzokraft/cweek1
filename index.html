@@ -1,0 +1,2055 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Library</title>
+
+    
+    <meta name="robots" content="noindex">
+
+
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+
+    <!-- Fix Footer CSS -->
+    <link type="text/css" href="assets/vendor/fix-footer.css" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/material-icons.rtl.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/fontawesome.rtl.css" rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/preloader.rtl.css" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="assets/css/app.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/app.rtl.css" rel="stylesheet">
+
+
+     <!-- vuejs -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- fontawesome -->
+
+        <script src="lessons.js"></script>
+
+
+</head>
+
+<body class="layout-navbar-mini-fixed-bottom">
+
+ <div id="app">
+
+           
+
+    <div class="preloader">
+        <div class="sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+        </div>
+    </div>
+
+    <!-- Header Layout -->
+    <div class="mdk-header-layout js-mdk-header-layout">
+
+        <!-- Header -->
+
+        <div id="header" class="mdk-header bg-dark js-mdk-header mb-0" data-effects="waterfall blend-background" data-fixed data-condenses>
+            <div class="mdk-header__content">
+
+                <div class="navbar navbar-expand-sm navbar-dark bg-dark pr-0 pr-md-16pt" id="default-navbar" data-primary>
+
+                    <!-- Navbar toggler -->
+                    <button class="navbar-toggler navbar-toggler-right d-block d-md-none" type="button" data-toggle="sidebar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Navbar Brand -->
+                   
+                   
+
+                    <!-- Main Navigation -->
+
+                    <ul class="nav navbar-nav ml-auto flex-nowrap" style="white-space: nowrap;">
+                        <li class="ml-16pt nav-item">
+                            <a href="login.html" class="nav-link">
+                                <i class="material-icons">shopping_basket</i>
+                                <span class="sr-only">Login</span>
+                            </a>
+                        </li>
+                        <li class="d-none d-sm-flex nav-item">
+                            <a href="pricing.html" class="btn btn-accent">0 Checkout</a>
+                        </li>
+                    </ul>
+
+
+
+                    <!-- // END Main Navigation -->
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- // END Header -->
+
+        <!-- Header Layout Content -->
+        <div class="mdk-header-layout__content page-content pb-0">
+
+             <!-- PRODUCTS PAGE -->
+            <div v-if="shop">
+
+            <div class="mdk-drawer-layout js-mdk-drawer-layout" data-responsive-width="768px" data-push>
+
+                <!-- content -->
+                <div class="mdk-drawer-layout__content">
+                    <div class="page-section">
+                        <div class="container page__container">
+
+
+                            <div class="page-heading">
+                                <h4>Courses</h4>
+                                
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-4 col-xl-3 col-sm-6">
+
+                                    <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal " data-partial-height="40" data-toggle="popover" data-trigger="click">
+
+
+                                        <a href="course.html" class="js-image" data-position="center">
+                                            <img src="assets/images/paths/angular_430x168.png" alt="course">
+                                            <span class="overlay__content">
+                                                <span class="overlay__action d-flex flex-column text-center">
+                                                    <i class="material-icons">play_circle_outline</i>
+                                                    <small>Preview course</small>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <span class="corner-ribbon corner-ribbon--default-right-top corner-ribbon--shadow bg-accent text-white">NEW</span>
+
+                                        <div class="mdk-reveal__content">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="flex">
+                                                        <a class="card-title" href="course.html">Learn Angular fundamentals</a>
+                                                        <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                    </div>
+                                                    <a href="course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="rating flex">
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                    </div>
+                                                    <small class="text-50">6 hours</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popoverContainer d-none">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="assets/images/paths/angular_40x40%402x.png" width="40" height="40" alt="Angular" class="rounded">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="card-title mb-0">Learn Angular fundamentals</div>
+                                                <p class="lh-1 mb-0">
+                                                    <span class="text-black-50 small">with</span>
+                                                    <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                        <div class="mb-16pt">
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="col text-right">
+                                                <a href="course.html" class="btn btn-primary">Buy Now</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-sm-6">
+
+                                    <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal " data-partial-height="40" data-toggle="popover" data-trigger="click">
+
+
+                                        <a href="course.html" class="js-image" data-position="center">
+                                            <img src="assets/images/paths/swift_430x168.png" alt="course">
+                                            <span class="overlay__content">
+                                                <span class="overlay__action d-flex flex-column text-center">
+                                                    <i class="material-icons">play_circle_outline</i>
+                                                    <small>Preview course</small>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <div class="mdk-reveal__content">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="flex">
+                                                        <a class="card-title" href="course.html">Build an iOS Application in Swift</a>
+                                                        <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                    </div>
+                                                    <a href="course.html" class="ml-4pt material-icons text-accent card-course__icon-favorite">favorite</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="rating flex">
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                    </div>
+                                                    <small class="text-50">6 hours</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popoverContainer d-none">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="assets/images/paths/swift_40x40%402x.png" width="40" height="40" alt="Angular" class="rounded">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="card-title mb-0">Build an iOS Application in Swift</div>
+                                                <p class="lh-1 mb-0">
+                                                    <span class="text-black-50 small">with</span>
+                                                    <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                        <div class="mb-16pt">
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="col text-right">
+                                                <a href="course.html" class="btn btn-primary">Buy Now</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-sm-6">
+
+                                    <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal " data-partial-height="40" data-toggle="popover" data-trigger="click">
+
+
+                                        <a href="course.html" class="js-image" data-position="center">
+                                            <img src="assets/images/paths/photoshop_430x168.png" alt="course">
+                                            <span class="overlay__content">
+                                                <span class="overlay__action d-flex flex-column text-center">
+                                                    <i class="material-icons">play_circle_outline</i>
+                                                    <small>Preview course</small>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <div class="mdk-reveal__content">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="flex">
+                                                        <a class="card-title" href="course.html">Learn Photoshop</a>
+                                                        <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                    </div>
+                                                    <a href="course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="rating flex">
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                    </div>
+                                                    <small class="text-50">6 hours</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popoverContainer d-none">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="assets/images/paths/photoshop_40x40%402x.png" width="40" height="40" alt="Angular" class="rounded">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="card-title mb-0">Learn Photoshop</div>
+                                                <p class="lh-1 mb-0">
+                                                    <span class="text-black-50 small">with</span>
+                                                    <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                        <div class="mb-16pt">
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="col text-right">
+                                                <a href="course.html" class="btn btn-primary">Buy Now</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-sm-6">
+
+                                    <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal " data-partial-height="40" data-toggle="popover" data-trigger="click">
+
+
+                                        <a href="course.html" class="js-image" data-position="center">
+                                            <img src="assets/images/paths/craft_430x168.png" alt="course">
+                                            <span class="overlay__content">
+                                                <span class="overlay__action d-flex flex-column text-center">
+                                                    <i class="material-icons">play_circle_outline</i>
+                                                    <small>Preview course</small>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <div class="mdk-reveal__content">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="flex">
+                                                        <a class="card-title" href="course.html">Craft by inVision</a>
+                                                        <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                    </div>
+                                                    <a href="course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="rating flex">
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                    </div>
+                                                    <small class="text-50">6 hours</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popoverContainer d-none">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="assets/images/paths/craft_40x40%402x.png" width="40" height="40" alt="Angular" class="rounded">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="card-title mb-0">Craft by inVision</div>
+                                                <p class="lh-1 mb-0">
+                                                    <span class="text-black-50 small">with</span>
+                                                    <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                        <div class="mb-16pt">
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="col text-right">
+                                                <a href="course.html" class="btn btn-primary">Buy Now</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-sm-6">
+
+                                    <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal " data-partial-height="40" data-toggle="popover" data-trigger="click">
+
+
+                                        <a href="course.html" class="js-image" data-position="center">
+                                            <img src="assets/images/paths/wordpress_430x168.png" alt="course">
+                                            <span class="overlay__content">
+                                                <span class="overlay__action d-flex flex-column text-center">
+                                                    <i class="material-icons">play_circle_outline</i>
+                                                    <small>Preview course</small>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <div class="mdk-reveal__content">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="flex">
+                                                        <a class="card-title" href="course.html">Build a WordPress Website</a>
+                                                        <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                    </div>
+                                                    <a href="course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="rating flex">
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                    </div>
+                                                    <small class="text-50">6 hours</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popoverContainer d-none">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="assets/images/paths/wordpress_40x40%402x.png" width="40" height="40" alt="Angular" class="rounded">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="card-title mb-0">Build a WordPress Website</div>
+                                                <p class="lh-1 mb-0">
+                                                    <span class="text-black-50 small">with</span>
+                                                    <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                        <div class="mb-16pt">
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="col text-right">
+                                                <a href="course.html" class="btn btn-primary">Buy Now</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-sm-6">
+
+                                    <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal " data-partial-height="40" data-toggle="popover" data-trigger="click">
+
+
+                                        <a href="course.html" class="js-image" data-position="left">
+                                            <img src="assets/images/paths/react_430x168.png" alt="course">
+                                            <span class="overlay__content">
+                                                <span class="overlay__action d-flex flex-column text-center">
+                                                    <i class="material-icons">play_circle_outline</i>
+                                                    <small>Preview course</small>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <div class="mdk-reveal__content">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="flex">
+                                                        <a class="card-title" href="course.html">Become a React Native Developer</a>
+                                                        <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                    </div>
+                                                    <a href="course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="rating flex">
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                    </div>
+                                                    <small class="text-50">6 hours</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popoverContainer d-none">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="assets/images/paths/react_40x40%402x.png" width="40" height="40" alt="Angular" class="rounded">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="card-title mb-0">Become a React Native Developer</div>
+                                                <p class="lh-1 mb-0">
+                                                    <span class="text-black-50 small">with</span>
+                                                    <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                        <div class="mb-16pt">
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="col text-right">
+                                                <a href="course.html" class="btn btn-primary">Buy Now</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-sm-6">
+
+                                    <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal " data-partial-height="40" data-toggle="popover" data-trigger="click">
+
+
+                                        <a href="course.html" class="js-image" data-position="center">
+                                            <img src="assets/images/paths/redis_430x168.png" alt="course">
+                                            <span class="overlay__content">
+                                                <span class="overlay__action d-flex flex-column text-center">
+                                                    <i class="material-icons">play_circle_outline</i>
+                                                    <small>Preview course</small>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <div class="mdk-reveal__content">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="flex">
+                                                        <a class="card-title" href="course.html">Become a Redis Developer</a>
+                                                        <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                    </div>
+                                                    <a href="course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="rating flex">
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                    </div>
+                                                    <small class="text-50">6 hours</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popoverContainer d-none">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="assets/images/paths/redis_40x40%402x.png" width="40" height="40" alt="Angular" class="rounded">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="card-title mb-0">Become a Redis Developer</div>
+                                                <p class="lh-1 mb-0">
+                                                    <span class="text-black-50 small">with</span>
+                                                    <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                        <div class="mb-16pt">
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="col text-right">
+                                                <a href="course.html" class="btn btn-primary">Buy Now</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-sm-6">
+
+                                    <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal " data-partial-height="40" data-toggle="popover" data-trigger="click">
+
+
+                                        <a href="course.html" class="js-image" data-position="left">
+                                            <img src="assets/images/paths/angular_testing_430x168.png" alt="course">
+                                            <span class="overlay__content">
+                                                <span class="overlay__action d-flex flex-column text-center">
+                                                    <i class="material-icons">play_circle_outline</i>
+                                                    <small>Preview course</small>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <div class="mdk-reveal__content">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="flex">
+                                                        <a class="card-title" href="course.html">Angular Unit Testing</a>
+                                                        <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                    </div>
+                                                    <a href="course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="rating flex">
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                    </div>
+                                                    <small class="text-50">6 hours</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popoverContainer d-none">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="assets/images/paths/angular_40x40%402x.png" width="40" height="40" alt="Angular" class="rounded">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="card-title mb-0">Angular Unit Testing</div>
+                                                <p class="lh-1 mb-0">
+                                                    <span class="text-black-50 small">with</span>
+                                                    <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                        <div class="mb-16pt">
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="col text-right">
+                                                <a href="course.html" class="btn btn-primary">Buy Now</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-sm-6">
+
+                                    <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal " data-partial-height="40" data-toggle="popover" data-trigger="click">
+
+
+                                        <a href="course.html" class="js-image" data-position="left">
+                                            <img src="assets/images/paths/typescript_430x168.png" alt="course">
+                                            <span class="overlay__content">
+                                                <span class="overlay__action d-flex flex-column text-center">
+                                                    <i class="material-icons">play_circle_outline</i>
+                                                    <small>Preview course</small>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <div class="mdk-reveal__content">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="flex">
+                                                        <a class="card-title" href="course.html">Introduction to Typescript</a>
+                                                        <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                    </div>
+                                                    <a href="course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="rating flex">
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                    </div>
+                                                    <small class="text-50">6 hours</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popoverContainer d-none">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="assets/images/paths/typescript_40x40%402x.png" width="40" height="40" alt="Angular" class="rounded">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="card-title mb-0">Introduction to Typescript</div>
+                                                <p class="lh-1 mb-0">
+                                                    <span class="text-black-50 small">with</span>
+                                                    <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                        <div class="mb-16pt">
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="col text-right">
+                                                <a href="course.html" class="btn btn-primary">Buy Now</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-sm-6">
+
+                                    <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal " data-partial-height="40" data-toggle="popover" data-trigger="click">
+
+
+                                        <a href="course.html" class="js-image" data-position="left">
+                                            <img src="assets/images/paths/angular_routing_430x168.png" alt="course">
+                                            <span class="overlay__content">
+                                                <span class="overlay__action d-flex flex-column text-center">
+                                                    <i class="material-icons">play_circle_outline</i>
+                                                    <small>Preview course</small>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <div class="mdk-reveal__content">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="flex">
+                                                        <a class="card-title" href="course.html">Angular Routing In-Depth</a>
+                                                        <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                    </div>
+                                                    <a href="course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="rating flex">
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                    </div>
+                                                    <small class="text-50">6 hours</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popoverContainer d-none">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="assets/images/paths/angular_40x40%402x.png" width="40" height="40" alt="Angular" class="rounded">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="card-title mb-0">Angular Routing In-Depth</div>
+                                                <p class="lh-1 mb-0">
+                                                    <span class="text-black-50 small">with</span>
+                                                    <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                        <div class="mb-16pt">
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="col text-right">
+                                                <a href="course.html" class="btn btn-primary">Buy Now</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-sm-6">
+
+                                    <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal " data-partial-height="40" data-toggle="popover" data-trigger="click">
+
+
+                                        <a href="course.html" class="js-image" data-position="center">
+                                            <img src="assets/images/paths/invision_430x168.png" alt="course">
+                                            <span class="overlay__content">
+                                                <span class="overlay__action d-flex flex-column text-center">
+                                                    <i class="material-icons">play_circle_outline</i>
+                                                    <small>Preview course</small>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <div class="mdk-reveal__content">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="flex">
+                                                        <a class="card-title" href="course.html">inVision App</a>
+                                                        <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                    </div>
+                                                    <a href="course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="rating flex">
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                    </div>
+                                                    <small class="text-50">6 hours</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popoverContainer d-none">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="assets/images/paths/invision_40x40%402x.png" width="40" height="40" alt="Angular" class="rounded">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="card-title mb-0">inVision App</div>
+                                                <p class="lh-1 mb-0">
+                                                    <span class="text-black-50 small">with</span>
+                                                    <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                        <div class="mb-16pt">
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="col text-right">
+                                                <a href="course.html" class="btn btn-primary">Buy Now</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-sm-6">
+
+                                    <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal " data-partial-height="40" data-toggle="popover" data-trigger="click">
+
+
+                                        <a href="course.html" class="js-image" data-position="center">
+                                            <img src="assets/images/paths/devops_430x168.png" alt="course">
+                                            <span class="overlay__content">
+                                                <span class="overlay__action d-flex flex-column text-center">
+                                                    <i class="material-icons">play_circle_outline</i>
+                                                    <small>Preview course</small>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <div class="mdk-reveal__content">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="flex">
+                                                        <a class="card-title" href="course.html">Become a DevOps Engineer</a>
+                                                        <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                    </div>
+                                                    <a href="course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="rating flex">
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star</span></span>
+                                                        <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                    </div>
+                                                    <small class="text-50">6 hours</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popoverContainer d-none">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="assets/images/paths/devops_40x40%402x.png" width="40" height="40" alt="Angular" class="rounded">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="card-title mb-0">Become a DevOps Engineer</div>
+                                                <p class="lh-1 mb-0">
+                                                    <span class="text-black-50 small">with</span>
+                                                    <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                        <div class="mb-16pt">
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                                                <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center mb-4pt">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="col text-right">
+                                                <a href="course.html" class="btn btn-primary">Buy Now</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Pagination -->
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <!-- drawer -->
+                <div class="mdk-drawer js-mdk-drawer" id="filters-drawer">
+                    <div class="mdk-drawer__content">
+                        <div class="mdk-drawer__inner" data-perfect-scrollbar data-perfect-scrollbar-wheel-propagation="true">
+                            <div class="pt-md-32pt pt-lg-64pt">
+                                <div class="px-24pt mb-24pt mb-md-48pt filter-section">
+                                    <ul class="accordion js-accordion m-0" id="library-category">
+                                        <li class="accordion__item open">
+                                            <a class="accordion__toggle" data-toggle="collapse" data-parent="#library-category" href="#library-all">
+                                                <span class="flex">Category</span>
+                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                            </a>
+                                            <nav class="accordion__menu collapse show" id="library-all">
+                                                <a class="accordion__menu-link active" href="library-filters.html">All categories</a>
+                                                <div>
+                                                    <a class="accordion__menu-link" href="#library-development" data-toggle="collapse">Development</a>
+                                                    <div class="collapse" id="library-development">
+                                                        <nav class="accordion__submenu">
+                                                            <a href="library-filters-development.html">All Development</a>
+                                                            <a href="library-filters-development.html">Web Development</a>
+                                                            <a href="library-filters-development.html">JavaScript</a>
+                                                            <a href="library-filters-development.html">HTML</a>
+                                                            <a href="library-filters-development.html">CSS</a>
+                                                            <a href="library-filters-development.html">WordPress</a>
+                                                            <a href="library-filters-development.html">PHP</a>
+                                                            <a href="library-filters-development.html">Ruby</a>
+                                                            <a href="library-filters-development.html">iOS Development</a>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                                <a class="accordion__menu-link" href="library-filters-development.html">Design</a>
+                                                <a class="accordion__menu-link" href="library-filters-development.html">Photography</a>
+                                                <a class="accordion__menu-link" href="library-filters-development.html">Business</a>
+                                            </nav>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="px-24pt filter-section">
+                                    <ul class="accordion js-accordion mb-24pt mb-md-48pt" id="library-difficulty">
+                                        <li class="accordion__item open">
+                                            <a class="accordion__toggle" data-toggle="collapse" data-parent="#library-difficulty" href="#library-difficulty-all">
+                                                <span class="flex">Difficulty</span>
+                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                            </a>
+                                            <nav class="accordion__menu collapse show" id="library-difficulty-all">
+                                                <form action="#">
+                                                    <div class="form-group custom-controls-stacked">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" checked id="difficulty-beginner">
+                                                            <label class="custom-control-label" for="difficulty-beginner">Beginner</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="difficulty-intermediate">
+                                                            <label class="custom-control-label" for="difficulty-intermediate">Intermediate</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="difficulty-advanced">
+                                                            <label class="custom-control-label" for="difficulty-advanced">Advanced</label>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </nav>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- // END drawer-layout -->
+
+
+
+
+
+
+
+
+            <div class="js-fix-footer bg-white border-top-2">
+               
+                <div class="bg-footer page-section py-lg-32pt">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-4 mb-24pt mb-md-0">
+                                <p class="text-white-70 mb-8pt"><strong>Follow us</strong></p>
+                                <nav class="nav nav-links nav--flush">
+                                    <a href="#" class="nav-link mr-8pt"><img src="assets/images/icon/footer/facebook-square%402x.png" width="24" height="24" alt="Facebook"></a>
+                                    <a href="#" class="nav-link mr-8pt"><img src="assets/images/icon/footer/twitter-square%402x.png" width="24" height="24" alt="Twitter"></a>
+                                    <a href="#" class="nav-link mr-8pt"><img src="assets/images/icon/footer/vimeo-square%402x.png" width="24" height="24" alt="Vimeo"></a>
+                                    <a href="#" class="nav-link"><img src="assets/images/icon/footer/youtube-square%402x.png" width="24" height="24" alt="YouTube"></a>
+                                </nav>
+                            </div>
+                            <div class="col-md-6 col-sm-4 mb-24pt mb-md-0 d-flex align-items-center">
+                                <a href="#" class="btn btn-outline-white">English <span class="icon--right material-icons">arrow_drop_down</span></a>
+                            </div>
+                            <div class="col-md-4 text-md-right">
+                                <p class="mb-8pt d-flex align-items-md-center justify-content-md-end">
+                                    <a href="#" class="text-white-70 text-underline mr-16pt">Terms</a>
+                                    <a href="#" class="text-white-70 text-underline">Privacy policy</a>
+                                </p>
+                                <p class="text-white-50 mb-0">Copyright 2019 &copy; All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- // END Header Layout Content -->
+
+    </div>
+    <!-- // END Header Layout -->
+
+    <div class="navbar navbar-expand-sm navbar-mini navbar-dark fixed-bottom bg-dark d-none d-md-flex p-0" id="demo-navbar">
+        <div class="container-fluid">
+
+        </div>
+    </div>
+    <!-- drawer -->
+    <div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+        <div class="mdk-drawer__content">
+            <div class="sidebar sidebar-dark sidebar-left" data-perfect-scrollbar>
+                <div class="sidebar-p-a sidebar-b-b sidebar-m-b pt-0">
+
+                  
+                </div>
+
+                <ul class="sidebar-menu">
+                    <li class="sidebar-menu-item">
+                        <a class="sidebar-menu-button" href="#">Home Page</a>
+                    </li>
+                  
+                </ul>
+
+                <div class="sidebar-heading">Pages</div>
+              
+                <div class="sidebar-heading">Components</div>
+               
+            </div>
+        </div>
+    </div>
+    <!-- // END drawer -->
+    
+    <!-- Modal -->
+    <div class="modal courses-modal" id="courses" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-i8-plus bg-body pr-0">
+                            <div class="py-16pt pl-16pt menu">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#courses-development" data-toggle="tab">Development</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#courses-design" data-toggle="tab">Design</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#courses-photography" data-toggle="tab">Photography</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#courses-marketing" data-toggle="tab">Marketing</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#courses-business" data-toggle="tab">Business</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-6 col-i8-plus-auto tab-content">
+
+
+                            <div id="courses-development" class="tab-pane show active">
+                                <div class="row no-gutters">
+                                    <div class="col-md-6 p-0">
+                                        <div class="p-24pt d-flex h-100 flex-column">
+                                            <div class="flex">
+                                                <h5 class="text-black-100">Courses</h5>
+                                                <ul class="nav flex-column mb-24pt">
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Web Development</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">JavaScript</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">HTML</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">CSS</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">WordPress</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">PHP</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">iOS Development</a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <a href="library.html" class="btn btn-block text-center btn-secondary">Library</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 p-0">
+                                        <div class="p-24pt d-flex h-100 flex-column">
+                                            <div class="flex">
+                                                <h5 class="text-black-100">Learning Paths</h5>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/angular_40x40%402x.png" width="40" height="40" alt="Angular" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">Angular</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">24 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/swift_40x40%402x.png" width="40" height="40" alt="Swift" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">Swift</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">22 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/react_40x40%402x.png" width="40" height="40" alt="React Native" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">React Native</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">18 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/wordpress_40x40%402x.png" width="40" height="40" alt="WordPress" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">WordPress</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">13 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-24pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/devops_40x40%402x.png" width="40" height="40" alt="Development Tools" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">Development Tools</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">5 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <a href="paths.html" class="btn btn-block text-center btn-outline-secondary">Learning Paths</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div id="courses-design" class="tab-pane">
+                                <div class="row no-gutters">
+                                    <div class="col-md-6 p-0">
+                                        <div class="p-24pt d-flex h-100 flex-column">
+                                            <div class="flex">
+                                                <h5 class="text-black-100">Courses</h5>
+                                                <ul class="nav flex-column mb-24pt">
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Illustration</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Design Skills</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Design Techniques</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Page Layout</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Projects</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Drawing</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Typography</a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <a href="library.html" class="btn btn-block text-center btn-secondary">Library</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 p-0">
+                                        <div class="p-24pt d-flex h-100 flex-column">
+                                            <div class="flex">
+                                                <h5 class="text-black-100">Learning Paths</h5>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/angular_40x40%402x.png" width="40" height="40" alt="Angular" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">Angular</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">24 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/swift_40x40%402x.png" width="40" height="40" alt="Swift" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">Swift</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">22 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/react_40x40%402x.png" width="40" height="40" alt="React Native" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">React Native</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">18 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/wordpress_40x40%402x.png" width="40" height="40" alt="WordPress" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">WordPress</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">13 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-24pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/devops_40x40%402x.png" width="40" height="40" alt="Development Tools" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">Development Tools</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">5 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <a href="paths.html" class="btn btn-block text-center btn-outline-secondary">Learning Paths</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div id="courses-photography" class="tab-pane">
+                                <div class="row no-gutters">
+                                    <div class="col-md-6 p-0">
+                                        <div class="p-24pt d-flex h-100 flex-column">
+                                            <div class="flex">
+                                                <h5 class="text-black-100">Courses</h5>
+                                                <ul class="nav flex-column mb-24pt">
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Cameras</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Raw Processing</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Masking</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Compositing</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Portraits</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Photo Management</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Lighting</a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <a href="library.html" class="btn btn-block text-center btn-secondary">Library</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 p-0">
+                                        <div class="p-24pt d-flex h-100 flex-column">
+                                            <div class="flex">
+                                                <h5 class="text-black-100">Learning Paths</h5>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/angular_40x40%402x.png" width="40" height="40" alt="Angular" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">Angular</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">24 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/swift_40x40%402x.png" width="40" height="40" alt="Swift" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">Swift</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">22 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/react_40x40%402x.png" width="40" height="40" alt="React Native" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">React Native</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">18 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/wordpress_40x40%402x.png" width="40" height="40" alt="WordPress" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">WordPress</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">13 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-24pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/devops_40x40%402x.png" width="40" height="40" alt="Development Tools" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">Development Tools</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">5 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <a href="paths.html" class="btn btn-block text-center btn-outline-secondary">Learning Paths</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div id="courses-marketing" class="tab-pane">
+                                <div class="row no-gutters">
+                                    <div class="col-md-6 p-0">
+                                        <div class="p-24pt d-flex h-100 flex-column">
+                                            <div class="flex">
+                                                <h5 class="text-black-100">Courses</h5>
+                                                <ul class="nav flex-column mb-24pt">
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Small Business</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Marketing</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Enterprise Marketing</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Content Marketing</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Online Marketing</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Social Media Marketing</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Advertising</a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <a href="library.html" class="btn btn-block text-center btn-secondary">Library</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 p-0">
+                                        <div class="p-24pt d-flex h-100 flex-column">
+                                            <div class="flex">
+                                                <h5 class="text-black-100">Learning Paths</h5>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/angular_40x40%402x.png" width="40" height="40" alt="Angular" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">Angular</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">24 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/swift_40x40%402x.png" width="40" height="40" alt="Swift" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">Swift</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">22 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/react_40x40%402x.png" width="40" height="40" alt="React Native" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">React Native</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">18 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/wordpress_40x40%402x.png" width="40" height="40" alt="WordPress" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">WordPress</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">13 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-24pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/devops_40x40%402x.png" width="40" height="40" alt="Development Tools" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">Development Tools</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">5 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <a href="paths.html" class="btn btn-block text-center btn-outline-secondary">Learning Paths</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div id="courses-business" class="tab-pane">
+                                <div class="row no-gutters">
+                                    <div class="col-md-6 p-0">
+                                        <div class="p-24pt d-flex h-100 flex-column">
+                                            <div class="flex">
+                                                <h5 class="text-black-100">Courses</h5>
+                                                <ul class="nav flex-column mb-24pt">
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Business Skills</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Productivity</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Communication</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Leadership</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Management</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Career Development</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link px-0" href="library.html">Spreadsheets</a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <a href="library.html" class="btn btn-block text-center btn-secondary">Library</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 p-0">
+                                        <div class="p-24pt d-flex h-100 flex-column">
+                                            <div class="flex">
+                                                <h5 class="text-black-100">Learning Paths</h5>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/angular_40x40%402x.png" width="40" height="40" alt="Angular" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">Angular</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">24 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/swift_40x40%402x.png" width="40" height="40" alt="Swift" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">Swift</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">22 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/react_40x40%402x.png" width="40" height="40" alt="React Native" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">React Native</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">18 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-16pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/wordpress_40x40%402x.png" width="40" height="40" alt="WordPress" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">WordPress</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">13 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="mb-24pt">
+                                                    <a href="path.html" class="media text-black-100">
+                                                        <img src="assets/images/paths/devops_40x40%402x.png" width="40" height="40" alt="Development Tools" class="media-left rounded">
+                                                        <span class="media-body">
+                                                            <span class="card-title d-block mb-0">Development Tools</span>
+                                                            <span class="text-muted text-black-70 d-flex lh-1">5 courses</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <a href="paths.html" class="btn btn-block text-center btn-outline-secondary">Learning Paths</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/vendor/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap.min.js"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+
+    <!-- DOM Factory -->
+    <script src="assets/vendor/dom-factory.js"></script>
+
+    <!-- MDK -->
+    <script src="assets/vendor/material-design-kit.js"></script>
+
+    <!-- Fix Footer -->
+    <script src="assets/vendor/fix-footer.js"></script>
+
+    <!-- Chart.js -->
+    <script src="assets/vendor/Chart.min.js"></script>
+
+    <!-- App JS -->
+    <script src="assets/js/app.js"></script>
+
+    <!-- Highlight.js -->
+    <script src="assets/js/hljs.js"></script>
+
+    <!-- App Settings (safe to remove) -->
+    <script src="assets/js/app-settings.js"></script>
+
+
+
+
+</body>
+
+</html>
