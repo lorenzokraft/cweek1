@@ -1,174 +1,238 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>MiddleSex Course Library</title>
 
-
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Lawrence Course School</title>
-
-    
-    <meta name="robots" content="noindex">
-
-
+    <meta name="robots" content="noindex" />
 
     <!-- Perfect Scrollbar -->
-    <link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+    <link
+      type="text/css"
+      href="assets/vendor/perfect-scrollbar.css"
+      rel="stylesheet"
+    />
 
-   
     <!-- Material Design Icons -->
-    <link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
-    <link type="text/css" href="assets/css/material-icons.rtl.css" rel="stylesheet">
+    <link
+      type="text/css"
+      href="assets/css/material-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      href="assets/css/material-icons.rtl.css"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome Icons -->
-    <link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
-    <link type="text/css" href="assets/css/fontawesome.rtl.css" rel="stylesheet">
-
-    
+    <link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet" />
+    <link
+      type="text/css"
+      href="assets/css/fontawesome.rtl.css"
+      rel="stylesheet"
+    />
 
     <!-- App CSS -->
-    <link type="text/css" href="assets/css/app.css" rel="stylesheet">
-    <link type="text/css" href="assets/css/app.rtl.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link type="text/css" href="assets/css/app.css" rel="stylesheet" />
+    <link type="text/css" href="assets/css/app.rtl.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
+    <!-- vuejs -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- fontawesome -->
 
-     <!-- vuejs -->
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <!-- fontawesome -->
+    <script src="course.js"></script>
+  </head>
 
-        <script src="course.js"></script>
-</head>
-
-<body class="layout-navbar-mini-fixed-bottom">
-
-   
+  <body class="layout-navbar-mini-fixed-bottom">
     <div id="app">
-        <div id="header" class="mdk-header bg-dark js-mdk-header mb-0" data-effects="waterfall blend-background" data-fixed data-condenses>
-            <div class="mdk-header__content">
-                <div class="col-2">
-                        <button class="btn btn-success" v-on:click="showCheckout" v-if="cartItemCount > 0">{{cartItemCount}} <i class="fas fa-cart-plus"></i> Checkout</button>
+      <div
+        id="header"
+        class="mdk-header bg-dark js-mdk-header mb-0"
+        data-effects="waterfall blend-background"
+        data-fixed
+        data-condenses
+      >
+        <div class="mdk-header__content">
+          <div class="col-2">
+            <button
+              class="btn btn-success"
+              v-on:click="showCheckout"
+              v-if="cartItemCount > 0"
+            >
+              {{cartItemCount}} <i class="fas fa-cart-plus"></i> Checkout
+            </button>
 
-                        <button class="btn btn-secondary disabled" disabled v-else>{{cartItemCount}} <i class="fas fa-cart-plus"></i> Checkout</button>
-
-
-                   </div>
-                </div>
-            </div>
-
-
-            <!-- PRODUCTS PAGE -->
-            <div v-if="shop">
-               
-                <div>
-                    <div class="row">
-                        <div class="col-2 pl-5" style="background-color: #1e2226">
-                            <h4 style="color: white;">Sort by:</h4>
-                            <fieldset >
-                                <label>
-                                    <input v-model="sort" type="radio" name="Sort" value="price" v-on:click="sortedLessons('price', ord)" > Price
-                                </label><br>
-                                <label>
-                                    <input v-model="sort" type="radio" name="Sort" value="subj"> Subject
-                                </label><br>
-                                <label>
-                                    <input v-model="sort" type="radio" name="Sort" value="loc"> Location
-                                </label><br>
-                                <label>
-                                    <input v-model="sort" type="radio" name="Sort" value="avail"> Availability
-                                </label><br>
-                            </fieldset>
-
-                            <h4 class="mt-5 style=" style="color: white;" >Order</h4>
-                            <fieldset>
-                                <label>
-                                    <input v-model="ord" type="radio" name="Order" value="asc"> Ascending
-                                </label><br>
-                                <label>
-                                    <input type="radio" name="Order" value="des" v-model="ord"> Descending
-                                </label><br>
-                            </fieldset>
-                            
-                        </div>
-                        <div class="col-10 pl-0 pr-3">
-
-                             <h1>but</h1>
-                            <div class="row">
-
-
-                                <div class="col-4 mb-4" v-for="lesson in sortedLessons(sort, ord)">
-                                    <div class="card">
-                                        <img v-bind:src="lesson.image">
-                                        <div class="card-body">
-                                            <h5 class="card-title" v-text="lesson.subject"></h5>
-                                            <p>course: {{lesson.course}}</p>
-                                            <p>Level: {{lesson.level}}</p>
-                                            <p>Price: {{lesson.price}}</p>
-                                            <p>Number of spaces: {{lesson.availableInventory - cartCount(lesson)}}</p>
-                                            <button v-on:click="addToCart(lesson)" v-if="canAddToCart(lesson)" class="btn btn-block btn-info">
-                                                Add to cart
-                                            </button>
-                                            <button class="btn btn-secondary btn-block disabled" v-else>
-                                                Out of stock
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- CHECKOUT PAGE -->
-            <div v-else>
-                <div class="row mt-1">
-                    <div class="col-10" style="float: right;">
-                        <h1 class="text-center">Checkout</h1>
-                    </div>
-                    <div class="col-2">
-                        <button class="btn btn-success" v-on:click="showCheckout">{{cartItemCount}} <i class="fas fa-cart-plus"></i> Lessons</button>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <ul class="list-group">
-                            <li class="list-group-item" v-for="lesson in cart">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <img v-bind:src="lesson.image" style="height: 30px;width: 30px;">
-                                    </div>
-                                    <div class="col-6">
-                                        <p>{{lesson.subject}}</p>
-                                    </div>
-                                    <div class="col-2">
-                                        <span style="cursor: pointer;" class="text-danger" v-on:click="removeFromCart(lesson)" ><b>x</b></span>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <form>
-                    <div class="row m-5">
-                        <div class="form-group col-4">
-                            <input v-model="order.fullname" class="form-control border-top-0 border-left-0 border-right-0" placeholder="Full Name">
-                        </div>
-                        <div class="form-group col-4">
-                            <input v-model.number="order.phone" class="form-control border-top-0 border-left-0 border-right-0" placeholder="Phone">
-                        </div>
-                        <div class="form-group col-4">
-                            <button class="btn btn-primary" v-if="checkoutBtn" v-on:click="submitOrder">Checkout</button>
-
-                            <button class="btn btn-secondary" disabled v-else>Checkout</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+            <button class="btn btn-secondary disabled" disabled v-else>
+              {{cartItemCount}} <i class="fas fa-cart-plus"></i> Checkout
+            </button>
+          </div>
         </div>
+      </div>
 
+      <!-- PRODUCTS PAGE -->
+      <div v-if="shop">
+        <div>
+          <div class="row">
+            <div class="col-2 pl-5" style="background-color: #1e2226">
+              <h4 style="color: white">Sort by:</h4>
+              <fieldset>
+                <label>
+                  <input
+                    v-model="sort"
+                    type="radio"
+                    name="Sort"
+                    value="price"
+                    v-on:click="sortedLessons('price', ord)"
+                  />
+                  Price </label
+                ><br />
+                <label>
+                  <input v-model="sort" type="radio" name="Sort" value="subj" />
+                  Subject </label
+                ><br />
+                <label>
+                  <input v-model="sort" type="radio" name="Sort" value="loc" />
+                  Location </label
+                ><br />
+                <label>
+                  <input
+                    v-model="sort"
+                    type="radio"
+                    name="Sort"
+                    value="avail"
+                  />
+                  Availability </label
+                ><br />
+              </fieldset>
 
+              <h4 class="mt-5 style=" style="color: white">Order</h4>
+              <fieldset>
+                <label>
+                  <input v-model="ord" type="radio" name="Order" value="asc" />
+                  Ascending </label
+                ><br />
+                <label>
+                  <input type="radio" name="Order" value="des" v-model="ord" />
+                  Descending </label
+                ><br />
+              </fieldset>
+            </div>
+            <div class="col-10 pl-0 pr-3">
+              <h1 style="text-align: center">MiddleSex Course Library</h1>
+              <div class="row">
+                <div
+                  class="col-4 mb-4"
+                  v-for="lesson in sortedLessons(sort, ord)"
+                >
+                  <div class="card">
+                    <img v-bind:src="lesson.image" />
+                    <div class="card-body">
+                      <h5 class="card-title" v-text="lesson.subject"></h5>
+                      <p>course: {{lesson.course}}</p>
+                      <p>Level: {{lesson.level}}</p>
+                      <p>Price: {{lesson.price}}</p>
+                      <p>
+                        Number of spaces: {{lesson.availableInventory -
+                        cartCount(lesson)}}
+                      </p>
+                      <button
+                        v-on:click="addToCart(lesson)"
+                        v-if="canAddToCart(lesson)"
+                        class="btn btn-block btn-info"
+                      >
+                        Add to cart
+                      </button>
+                      <button
+                        class="btn btn-secondary btn-block disabled"
+                        v-else
+                      >
+                        Out of stock
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Check out code / Page here -->
+      <div v-else>
+        <div class="row mt-1">
+          <div class="col-10" style="float: left">
+            <h1 class="text-center">Checkout</h1>
+          </div>
+        </div>
+        <div class="col-8" style="margin-left: 20%">
+          <div>
+            <ul class="list-group">
+              <li class="list-group-item" v-for="lesson in cart">
+                <div class="row">
+                  <div class="col-4">
+                    <img
+                      v-bind:src="lesson.image"
+                      style="height: 60px; width: 60px"
+                    />
+                  </div>
+                  <div class="col-6">
+                    <p>{{lesson.course}}</p>
+                  </div>
+                  <div class="col-2">
+                    <span
+                      style="cursor: pointer"
+                      class="text-danger"
+                      v-on:click="removeFromCart(lesson)"
+                      ><b>x</b></span
+                    >
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <form class="checkOutForm">
+            <div class="row m-5">
+              <div class="form-group col-4">
+                <input
+                  v-model="order.fullname"
+                  class="form-control border-top-0 border-left-0 border-right-0"
+                  placeholder="Full Name"
+                />
+              </div>
+              <div class="form-group col-4">
+                <input
+                  v-model.number="order.phone"
+                  class="form-control border-top-0 border-left-0 border-right-0"
+                  placeholder="Emial Address"
+                />
+              </div>
+              <div class="form-group col-4">
+                <button
+                  class="btn btn-primary"
+                  v-if="checkoutBtn"
+                  v-on:click="submitOrder"
+                >
+                  Checkout
+                </button>
+
+                <button class="btn btn-secondary" disabled v-else>
+                  Checkout
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other assets  -->
     <!-- jQuery -->
     <script src="assets/vendor/jquery.min.js"></script>
 
@@ -200,161 +264,141 @@
     <!-- App Settings (safe to remove) -->
     <script src="assets/js/app-settings.js"></script>
 
-  <script>
-            var lessonStore = new Vue({
-                    el: "#app",
-                    data: {
-                        sitename: "Lessons Store",
-                        lessons: lessons,
-                        cart: [],
-                        order: {
-                            fullname: '',
-                            phone: ''
-                        },
-                        shop: true,
-                        sort: "subj",
-                        ord: "asc"
-                    },
-                    methods: {
-                        addToCart: function (lesson) {
-                            this.cart.push(lesson);
-                        },
-                        removeFromCart: function (lesson){
-                            this.cart.splice(this.cart.indexOf(lesson))
-                        },
-                        cartCount(id) {
-                            let count = 0;
-                            for (let i = 0; i < this.cart.length; i++) {
-                                if (this.cart[i] === id) {
-                                    count++;
-                                }
-                            }
-                            return count;
-                        },
-                        canAddToCart: function (lesson) {
-                            return lesson.availableInventory > this.cartCount(lesson);
-                        },
-                        showCheckout() {
-                            this.shop = this.shop ? false : true;
-                        },
-                        sortedLessons(sort, order) {
-                            let lessonsArray = this.lessons.slice(0);
-                            switch (sort) {
-                                // sort by price
-                                case "price":
-                                    if (order == "asc") {
-                                        function comparePrice(a, b) {
-                                            if (a.price > b.price)
-                                                return 1
-                                            if (a.price < b.price)
-                                                return -1
-                                            return 0
-                                        }
-                                        return lessonsArray.sort(comparePrice)
-                                    } else {
-                                        function comparePrice(a, b) {
-                                            if (a.price > b.price)
-                                                return -1
-                                            if (a.price < b.price)
-                                                return 1
-                                            return 0
-                                        }
-                                        return lessonsArray.sort(comparePrice)
-                                    }
-                                    break;
-                                
-                                // sort by location
-                                case "loc":
-                                    if (order == "asc") {
-                                        function compareLocation(a, b) {
-                                            if (a.location > b.location)
-                                                return 1
-                                            if (a.location < b.location)
-                                                return -1
-                                            return 0
-                                        }
-                                        return lessonsArray.sort(compareLocation)
-                                    } else {
-                                        function compareLocation(a, b) {
-                                            if (a.location > b.location)
-                                                return -1
-                                            if (a.location < b.location)
-                                                return 1
-                                            return 0
-                                        }
-                                        return lessonsArray.sort(compareLocation)
-                                    }
-                                    break;
-                                
-                                // sort by availability
-                                case "avail":
-                                    if (order == "asc") {
-                                        function compareAvailability(a, b) {
-                                            if (a.availableInventory > b.availableInventory)
-                                                return 1
-                                            if (a.availableInventory < b.availableInventory)
-                                                return -1
-                                            return 0
-                                        }
-                                        return lessonsArray.sort(compareAvailability)
-                                    } else {
-                                        function compareAvailability(a, b) {
-                                            if (a.availableInventory > b.availableInventory)
-                                                return -1
-                                            if (a.availableInventory < b.availableInventory)
-                                                return 1
-                                            return 0
-                                        }
-                                        return lessonsArray.sort(compareAvailability)
-                                    }
-                                    break;
+    <!-- Lesson Js -->
+    <script>
+      var lessonStore = new Vue({
+        el: "#app",
+        data: {
+          sitename: "Lessons Store",
+          lessons: lessons,
+          cart: [],
+          order: {
+            fullname: "",
+            phone: "",
+          },
+          shop: true,
+          sort: "subj",
+          ord: "asc",
+        },
+        methods: {
+          addToCart: function (lesson) {
+            this.cart.push(lesson);
+          },
+          removeFromCart: function (lesson) {
+            this.cart.splice(this.cart.indexOf(lesson));
+          },
+          cartCount(id) {
+            let count = 0;
+            for (let i = 0; i < this.cart.length; i++) {
+              if (this.cart[i] === id) {
+                count++;
+              }
+            }
+            return count;
+          },
+          canAddToCart: function (lesson) {
+            return lesson.availableInventory > this.cartCount(lesson);
+          },
+          showCheckout() {
+            this.shop = this.shop ? false : true;
+          },
+          sortedLessons(sort, order) {
+            let lessonsArray = this.lessons.slice(0);
+            switch (sort) {
+              // sort by price
+              case "price":
+                if (order == "asc") {
+                  function comparePrice(a, b) {
+                    if (a.price > b.price) return 1;
+                    if (a.price < b.price) return -1;
+                    return 0;
+                  }
+                  return lessonsArray.sort(comparePrice);
+                } else {
+                  function comparePrice(a, b) {
+                    if (a.price > b.price) return -1;
+                    if (a.price < b.price) return 1;
+                    return 0;
+                  }
+                  return lessonsArray.sort(comparePrice);
+                }
+                break;
 
-                                // by default, compare subject
-                                default:
-                                    if (order == "asc") {
-                                        function compareSubject(a, b) {
-                                            if (a.subject > b.subject)
-                                                return 1
-                                            if (a.subject < b.subject)
-                                                return -1
-                                            return 0
-                                        }
-                                        return lessonsArray.sort(compareSubject)
-                                    } else {
-                                        function compareSubject(a, b) {
-                                            if (a.subject > b.subject)
-                                                return -1
-                                            if (a.subject < b.subject)
-                                                return 1
-                                            return 0
-                                        }
-                                        return lessonsArray.sort(compareSubject)
-                                    }
-                                    break;
-                            }
-                        },
-                        submitOrder() {
-                            alert("Order submitted!")
-                        }
-                        
-                    },
-                    computed: {
-                        cartItemCount: function () {
-                            return this.cart.length;
-                        },
-                        checkoutBtn() {
-                            if (this.order.fullname && this.order.phone) {
-                                return true
-                            }
-                            else {
-                                return false
-                            }
-                        }
-                    }
-                })
-  </script>
+              // sort by location
+              case "loc":
+                if (order == "asc") {
+                  function compareLocation(a, b) {
+                    if (a.location > b.location) return 1;
+                    if (a.location < b.location) return -1;
+                    return 0;
+                  }
+                  return lessonsArray.sort(compareLocation);
+                } else {
+                  function compareLocation(a, b) {
+                    if (a.location > b.location) return -1;
+                    if (a.location < b.location) return 1;
+                    return 0;
+                  }
+                  return lessonsArray.sort(compareLocation);
+                }
+                break;
 
+              // sort by availability
+              case "avail":
+                if (order == "asc") {
+                  function compareAvailability(a, b) {
+                    if (a.availableInventory > b.availableInventory) return 1;
+                    if (a.availableInventory < b.availableInventory) return -1;
+                    return 0;
+                  }
+                  return lessonsArray.sort(compareAvailability);
+                } else {
+                  function compareAvailability(a, b) {
+                    if (a.availableInventory > b.availableInventory) return -1;
+                    if (a.availableInventory < b.availableInventory) return 1;
+                    return 0;
+                  }
+                  return lessonsArray.sort(compareAvailability);
+                }
+                break;
 
-</body>
-
+              // by default, compare subject
+              default:
+                if (order == "asc") {
+                  function compareSubject(a, b) {
+                    if (a.subject > b.subject) return 1;
+                    if (a.subject < b.subject) return -1;
+                    return 0;
+                  }
+                  return lessonsArray.sort(compareSubject);
+                } else {
+                  function compareSubject(a, b) {
+                    if (a.subject > b.subject) return -1;
+                    if (a.subject < b.subject) return 1;
+                    return 0;
+                  }
+                  return lessonsArray.sort(compareSubject);
+                }
+                break;
+            }
+          },
+          submitOrder() {
+            alert("Order submitted Succesfullly!");
+          },
+        },
+        computed: {
+          cartItemCount: function () {
+            return this.cart.length;
+          },
+          checkoutBtn() {
+            if (this.order.fullname && this.order.phone) {
+              return true;
+            } else {
+              return false;
+            }
+          },
+        },
+      });
+    </script>
+  </body>
 </html>
