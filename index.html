@@ -146,6 +146,8 @@
                         Number of spaces: {{lesson.availableInventory -
                         cartCount(lesson)}}
                       </p>
+                       Ratings: {{lesson.rating}}
+                      </p>
                       <button
                         v-on:click="addToCart(lesson)"
                         v-if="canAddToCart(lesson)"
