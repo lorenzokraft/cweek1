@@ -43,7 +43,7 @@
     <link type="text/css" href="assets/css/app.rtl.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="style.css" />
 
-    <!-- vuejs -->
+    <!-- Link vuejs -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- fontawesome -->
 
@@ -159,7 +159,7 @@
                         class="btn btn-secondary btn-block disabled"
                         v-else
                       >
-                        Out of stock
+                        No Available Seat 
                       </button>
                     </div>
                   </div>
@@ -170,7 +170,7 @@
         </div>
       </div>
 
-      <!-- Check out code / Page here -->
+      <!-- This is my Check out code / Page here -->
       <div v-else>
         <div class="row mt-1">
           <div class="col-10" style="float: left">
@@ -204,7 +204,10 @@
             </ul>
           </div>
           <!-- checkour form here -->
-          <form class="checkOutForm">
+          <form class="checkOutForm" style="background: white;
+          margin-top: 40px;
+          padding:6 50px;
+          border-radius: 20px;">
             <div class="row m-5">
               <div class="form-group col-4">
                 <input
@@ -272,7 +275,7 @@
     <script src="assets/js/app-settings.js"></script>
 
     <!-- Lesson Js -->
-    <script>
+   <!--  <script>
       var lessonStore = new Vue({
         el: "#app",
         data: {
@@ -406,7 +409,7 @@
           },
         },
       });
-    </script>
+    </script> -->
   </body>
 </html>
 <!-- index page ends here  -->
