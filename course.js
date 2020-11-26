@@ -9,6 +9,7 @@ let lessons = [
     image: "assets/images/logo/angu.jpg", //Conver Image
     availableInventory: 5, // Available spots
     rating: 3,
+    starImg: "assets/images/logo/ratings.jpg",
   },
   {
     id: 02,
