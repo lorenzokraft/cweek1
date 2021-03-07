@@ -11,16 +11,16 @@ server.use(express.static('public'));
 const port = process.env.PORT || 8000;
 //set all http headers
 server.use((request, response, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*")
-    res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept');
-    res.setHeader('Access-Control-Allow-Methods', 'PUT');
+    response.setHeader("Access-Control-Allow-Origin", "*")
+    response.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept');
+    response.setHeader('Access-Control-Allow-Methods', 'PUT');
     next();
 });
 
 //connect to mongodb database client
 const MongoClient = require("mongodb").MongoClient;
 //create mongodb database instance
-let datbase;
+let database;
 //connect to the cluster
 MongoClient.connect("mongodb+srv://lawrence:lawrence2020@cluster0.sw51v.mongodb.net", (err, client) => {
     //make connection to specified database
@@ -30,7 +30,7 @@ MongoClient.connect("mongodb+srv://lawrence:lawrence2020@cluster0.sw51v.mongodb.
 //create a parameter for collection
 server.param("collection", (request, response, next, collection) => {
     request.collection = database.collection(collection);
-    console.log("collection name:", req.collection);
+    console.log("collection name:", request.collection);
     return next();
 });
 

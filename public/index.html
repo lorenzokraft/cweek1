@@ -282,7 +282,7 @@
         el: "#app",
         data: {
           sitename: "Lessons Store",
-          lessons: lessons,
+          lessons: [],
           cart: [],
           order: {
             fullname: "",
@@ -292,6 +292,19 @@
           sort: "subj",
           ord: "asc",
         },
+        //this is where course information is being fetched from backend
+        created: function () {
+                console.log("getting the course information from server......");
+                fetch("http://localhost:8000/courses").then(
+                    function (res) {
+                        res.json().then(
+                            function (json) {
+                                lessonStore.lessons = json;
+                            }
+                        )
+                    }
+                )
+            },
         methods: {
           addToCart: function (lesson) {
             this.cart.push(lesson);
