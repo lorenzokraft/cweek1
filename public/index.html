@@ -295,7 +295,7 @@
         //this is where course information is being fetched from backend
         created: function () {
                 console.log("getting the course information from server......");
-                fetch("http://localhost:8000/courses").then(
+                fetch("https://middlesex-course-library.herokuapp.com/courses").then(
                     function (res) {
                         res.json().then(
                             function (json) {
