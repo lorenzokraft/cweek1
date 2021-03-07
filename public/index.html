@@ -241,7 +241,7 @@
         cartCount(id) {
           let count = 0;
           for (let i = 0; i < this.cart.length; i++) {
-            if (this.cart[i] === id) {
+            if (this.cart[i]._id === id) {
               count++;
             }
           }
@@ -343,11 +343,11 @@
               break;
             }
             // update number of spaces of each course
-            no_of_spaces +=this.cartCount(course._id);
-            
+            no_of_spaces += this.cartCount(course._id);
+
           });
           //set order of spaces to new cart count
-          lessonStore.order.no_of_spaces = no_of_spaces ;
+          lessonStore.order.no_of_spaces = no_of_spaces;
           fetch('https://middlesex-course-library.herokuapp.com/orders', {
             method: 'POST',
             headers: {
