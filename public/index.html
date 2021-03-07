@@ -212,6 +212,7 @@
         order: {
           fullname: "",
           phone: "",
+          course_id: [],
           no_of_spaces: ""
         },
         shop: true,
@@ -335,13 +336,13 @@
         },
         submitOrder() {
           let no_of_spaces = 0;
-          lessonStore.lessons.forEach(course => {
-            //loop through cart
-            for (let i = 0; i < this.cart.length; i++) {
+          // loop through cart
+          lessonStore.cart.forEach(course => {
+              //add course id to course ids array
+              lessonStore.order.course_id.push(course._id);
               //reduce lesson spaces by cart count
               if (course.availableInventory != 0) course.availableInventory -= this.cartCount(course._id);
-              break;
-            }
+            
             // update number of spaces of each course
             no_of_spaces += this.cartCount(course._id);
 
