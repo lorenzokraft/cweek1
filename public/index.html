@@ -212,6 +212,7 @@
         order: {
           fullname: "",
           phone: "",
+          no_of_spaces: ""
         },
         shop: true,
         sort: "subj",
@@ -333,6 +334,7 @@
           }
         },
         submitOrder() {
+          let no_of_spaces = 0;
           lessonStore.lessons.forEach(course => {
             //loop through cart
             for (let i = 0; i < this.cart.length; i++) {
@@ -340,7 +342,12 @@
               if (course.availableInventory != 0) course.availableInventory -= this.cartCount(course._id);
               break;
             }
+            // update number of spaces of each course
+            no_of_spaces +=this.cartCount(course._id);
+            
           });
+          //set order of spaces to new cart count
+          lessonStore.order.no_of_spaces = cartCount;
           fetch('https://middlesex-course-library.herokuapp.com/orders', {
             method: 'POST',
             headers: {
