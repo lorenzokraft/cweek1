@@ -144,7 +144,7 @@
          background:white;
           margin-top: 40px;
           padding: 20px;
-          border-radius: 20px;"v-on:submit.prevent="submitOrder">
+          border-radius: 20px;" v-on:submit.prevent="submitOrder">
           <div class="row m-5">
             <div class="form-group col-4">
               <input v-model="order.fullname" class="form-control border-top-0 border-left-0 border-right-0"
@@ -333,10 +333,18 @@
           }
         },
         submitOrder() {
+          lessonStore.lessons.forEach(course => {
+            //loop through cart
+            for (let i = 0; i < this.cart.length; i++) {
+              //reduce lesson spaces by cart count
+              if (course.availableInventory != 0) course.availableInventory -= this.cartCount(course._id);
+              break;
+            }
+          });
           fetch('https://middlesex-course-library.herokuapp.com/orders', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json', 
+              'Content-Type': 'application/json',
             },
             mode: "cors",
             cache: "no-store",
